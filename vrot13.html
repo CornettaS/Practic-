@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ROT13 Шифратор</title>
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>ROT13 Шифратор</h1>
+            <p class="description">Преобразуйте текст с помощью алгоритма ROT13. Введите текст в поле ниже и нажмите кнопку для шифрования</p>
+        </header>
+
+        <div class="tool-container">
+            <div class="alphavit">Алфавит: <span id="alphavitOutput"></span></div>
+            
+            <div class="text-areas">
+                <div class="text-column">
+                    <label for="inputText">Исходный текст:</label>
+                    <textarea id="inputText" placeholder="Введите текст для обработки..."></textarea>
+                </div>
+                
+                <div class="text-column">
+                    <label for="outputText">Результат:</label>
+                    <textarea id="outputText" readonly></textarea>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="encryptBtn">
+                    Зашифровать
+                </button>
+            </div>
+        </div>
+        
+        <div class="log">
+            <h3>Процесс обработки:</h3>
+            <div class="operationOutput" id="operationOutput"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
