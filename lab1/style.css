@@ -1,7 +1,6 @@
 :root {
      --primary: #6366f1;
      --primary-hover: #4f46e5;
-     --secondary: #f472b6;
      --text: #1f2937;
      --bg: #f9fafb;
      --card-bg: #ffffff;
@@ -40,8 +39,7 @@
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 0.5rem;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
+            background: linear-gradient(90deg, var(--primary));
             background-clip: text;
             color: transparent;
         }
@@ -101,8 +99,14 @@
             box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
         }
 
+        #outputText:focus {
+            outline: none;
+            border-color: #da46e5;
+            box-shadow: 0 0 0 3px rgba(217, 99, 241, 0.2);
+        }
+
         #outputText {
-            background-color: #eef2ff;
+            background-color: #ffeef9
         }
 
         .controls {
@@ -160,12 +164,15 @@
 
         .operationOutput {
             font-family: monospace;
-            white-space: pre-wrap;
             background-color: var(--card-bg);
             padding: 1rem;
             border-radius: 8px;
             border-left: 4px solid var(--primary);
+            border-right: 4px solid var(--primary);
+            
         }
+
+        
 
         @media (max-width: 768px) {
             .text-areas {
